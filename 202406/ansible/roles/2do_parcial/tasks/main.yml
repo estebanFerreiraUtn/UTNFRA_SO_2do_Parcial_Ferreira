@@ -1,0 +1,51 @@
+---
+# tasks file for 2do_parcial
+
+- debug:
+    msg: "Tareas del 2do Parcial"
+
+- name: Crear estructura de directorios  
+  become: true
+  vars:
+    ansible_become_pass: "pass"
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  with_items:
+    - "/tmp/2do_parcial/alumno"
+    - "/tmp/2do_parcial/equipo"
+
+- name: Generar datos_alumno.txt
+  become: true
+  vars:
+    ansible_become_pass: "pass"
+    tu_nombre: "Esteban Oscar"
+    tu_apellido: "Ferreira"
+    tu_division: "311"
+  template:
+    src: template_a.j2
+    dest: "/tmp/2do_parcial/alumno/datos_alumno.txt"
+
+- name: Generar datos_equipo.txt
+  become: true
+  vars:
+    ansible_become_pass: "pass"
+    tu_ip: "192.168.56.3"
+    tu_distro: "Ubuntu 22.04.5 LTS"
+    cores: "2"
+  template:
+    src: template_b.j2
+    dest: "/tmp/2do_parcial/equipo/datos_equipo.txt"
+
+- name: Agregar grupo 2PSupervisores a sudoers
+  become: true
+  vars:
+    ansible_become_pass: "pass"
+  lineinfile:
+    path: /etc/sudoers
+    regexp: '^%2PSupervisores'    
+    line: '%2PSupervisores ALL=(ALL:ALL) NOPASSWD: ALL'
+    insertafter: '^# Allow members of group sudo to execute any command'
+    validate: 'visudo -cf %s'
+  

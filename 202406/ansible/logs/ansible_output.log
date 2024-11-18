@@ -1,0 +1,605 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:06:53,217 p=27899 u=esteban.ferreira n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-18 16:06:53,220 p=27899 u=esteban.ferreira n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit
+localhost does not match 'all'
+
+2024-11-18 16:06:53,369 p=27899 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************
+2024-11-18 16:06:53,369 p=27899 u=esteban.ferreira n=ansible | skipping: no hosts matched
+2024-11-18 16:06:53,369 p=27899 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************
+2024-11-18 16:13:24,965 p=27904 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-11-18 16:13:25,061 p=27904 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************
+2024-11-18 16:13:25,072 p=27904 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ***************************************************************************
+2024-11-18 16:13:25,954 p=27904 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 16:13:26,353 p=27904 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 16:13:26,367 p=27904 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] ****************************************************************
+2024-11-18 16:13:26,401 p=27904 u=esteban.ferreira n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 7, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+directorios_a_crear:
+^ here
+
+2024-11-18 16:13:26,402 p=27904 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************
+2024-11-18 16:13:26,402 p=27904 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:13:26,402 p=27904 u=esteban.ferreira n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:15:03,602 p=28261 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-11-18 16:15:03,696 p=28261 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************
+2024-11-18 16:15:03,702 p=28261 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ***************************************************************************
+2024-11-18 16:15:04,488 p=28261 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 16:15:04,925 p=28261 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 16:15:04,938 p=28261 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] ****************************************************************
+2024-11-18 16:15:04,970 p=28261 u=esteban.ferreira n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 7, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- directorios_a_crear:
+  ^ here
+
+2024-11-18 16:15:04,971 p=28261 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************
+2024-11-18 16:15:04,971 p=28261 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:15:04,971 p=28261 u=esteban.ferreira n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:19:39,150 p=28579 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-11-18 16:19:39,244 p=28579 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************
+2024-11-18 16:19:39,251 p=28579 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ***************************************************************************
+2024-11-18 16:19:40,029 p=28579 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 16:19:40,473 p=28579 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 16:19:40,487 p=28579 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] ****************************************************************
+2024-11-18 16:19:40,531 p=28579 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ***********************************************************************
+2024-11-18 16:19:40,546 p=28579 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 16:19:40,551 p=28579 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 16:19:40,558 p=28579 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] *********************************************
+2024-11-18 16:19:40,711 p=28579 u=esteban.ferreira n=ansible | failed: [localhost] (item=/tmp/2do_parcial/alumno) => {"ansible_loop_var": "item", "changed": false, "item": "/tmp/2do_parcial/alumno", "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-11-18 16:19:40,734 p=28579 u=esteban.ferreira n=ansible | failed: [localhost] (item=/tmp/2do_parcial/equipo) => {"ansible_loop_var": "item", "changed": false, "item": "/tmp/2do_parcial/equipo", "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-11-18 16:19:40,748 p=28579 u=esteban.ferreira n=ansible | fatal: [127.0.0.1]: FAILED! => {"msg": "Missing sudo password"}
+2024-11-18 16:19:40,750 p=28579 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************
+2024-11-18 16:19:40,750 p=28579 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:19:40,750 p=28579 u=esteban.ferreira n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:23:52,605 p=28944 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-11-18 16:23:52,698 p=28944 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************
+2024-11-18 16:23:52,705 p=28944 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ***************************************************************************
+2024-11-18 16:23:53,463 p=28944 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 16:23:53,919 p=28944 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 16:23:53,932 p=28944 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] ****************************************************************
+2024-11-18 16:23:53,974 p=28944 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ***********************************************************************
+2024-11-18 16:23:53,988 p=28944 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 16:23:53,992 p=28944 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 16:23:54,000 p=28944 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] *********************************************
+2024-11-18 16:23:54,148 p=28944 u=esteban.ferreira n=ansible | failed: [localhost] (item=/tmp/2do_parcial/alumno) => {"ansible_loop_var": "item", "changed": false, "item": "/tmp/2do_parcial/alumno", "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-11-18 16:23:54,174 p=28944 u=esteban.ferreira n=ansible | failed: [localhost] (item=/tmp/2do_parcial/equipo) => {"ansible_loop_var": "item", "changed": false, "item": "/tmp/2do_parcial/equipo", "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-11-18 16:23:54,190 p=28944 u=esteban.ferreira n=ansible | fatal: [127.0.0.1]: FAILED! => {"msg": "Missing sudo password"}
+2024-11-18 16:23:54,191 p=28944 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************
+2024-11-18 16:23:54,191 p=28944 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:23:54,192 p=28944 u=esteban.ferreira n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:25:56,123 p=29299 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-11-18 16:25:56,198 p=29299 u=esteban.ferreira n=ansible | ERROR! Invalid options for include_role: become
+
+The error appears to be in '/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/playbook.yml': line 5, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - include_role:
+      ^ here
+
+2024-11-18 16:26:25,907 p=29302 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-11-18 16:26:26,001 p=29302 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************
+2024-11-18 16:26:26,007 p=29302 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ***************************************************************************
+2024-11-18 16:26:26,785 p=29302 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 16:26:27,230 p=29302 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 16:26:27,243 p=29302 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] ****************************************************************
+2024-11-18 16:26:27,284 p=29302 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ***********************************************************************
+2024-11-18 16:26:27,299 p=29302 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 16:26:27,303 p=29302 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 16:26:27,310 p=29302 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] *********************************************
+2024-11-18 16:26:27,456 p=29302 u=esteban.ferreira n=ansible | failed: [localhost] (item=/tmp/2do_parcial/alumno) => {"ansible_loop_var": "item", "changed": false, "item": "/tmp/2do_parcial/alumno", "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-11-18 16:26:27,480 p=29302 u=esteban.ferreira n=ansible | failed: [localhost] (item=/tmp/2do_parcial/equipo) => {"ansible_loop_var": "item", "changed": false, "item": "/tmp/2do_parcial/equipo", "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-11-18 16:26:27,497 p=29302 u=esteban.ferreira n=ansible | fatal: [127.0.0.1]: FAILED! => {"msg": "Missing sudo password"}
+2024-11-18 16:26:27,498 p=29302 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************
+2024-11-18 16:26:27,498 p=29302 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:26:27,498 p=29302 u=esteban.ferreira n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:31:17,050 p=29658 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-11-18 16:31:17,148 p=29658 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************
+2024-11-18 16:31:17,154 p=29658 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ***************************************************************************
+2024-11-18 16:31:17,989 p=29658 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 16:31:18,438 p=29658 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 16:31:18,452 p=29658 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] ****************************************************************
+2024-11-18 16:31:18,494 p=29658 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ***********************************************************************
+2024-11-18 16:31:18,510 p=29658 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 16:31:18,514 p=29658 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 16:31:18,536 p=29658 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] *********************************************
+2024-11-18 16:31:18,809 p=29658 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 16:31:18,860 p=29658 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 16:31:18,954 p=29658 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 16:31:19,088 p=29658 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 16:31:19,095 p=29658 u=esteban.ferreira n=ansible | TASK [Otra tarea] ********************************************************************************
+2024-11-18 16:31:19,110 p=29658 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 16:31:19,114 p=29658 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 16:31:19,129 p=29658 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************
+2024-11-18 16:31:19,129 p=29658 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 16:31:19,129 p=29658 u=esteban.ferreira n=ansible | localhost                  : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 17:17:27,166 p=30123 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 17:17:27,262 p=30123 u=esteban.ferreira n=ansible | PLAY [all] ****************************************************************************************************************
+2024-11-18 17:17:27,268 p=30123 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2024-11-18 17:17:28,043 p=30123 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 17:17:28,544 p=30123 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 17:17:28,557 p=30123 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] *****************************************************************************************
+2024-11-18 17:17:28,593 p=30123 u=esteban.ferreira n=ansible | ERROR! Invalid variable name in vars specified for Task: 'tu-nombre' is not a valid variable name
+
+The error appears to be in '/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 25, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  vars:
+    ansible_become_pass: "pass"
+    ^ here
+
+2024-11-18 17:17:28,594 p=30123 u=esteban.ferreira n=ansible | PLAY RECAP ****************************************************************************************************************
+2024-11-18 17:17:28,594 p=30123 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 17:17:28,594 p=30123 u=esteban.ferreira n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 17:18:53,877 p=30458 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 17:18:53,975 p=30458 u=esteban.ferreira n=ansible | PLAY [all] ****************************************************************************************************************
+2024-11-18 17:18:53,982 p=30458 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2024-11-18 17:18:54,801 p=30458 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 17:18:55,273 p=30458 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 17:18:55,287 p=30458 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] *****************************************************************************************
+2024-11-18 17:18:55,322 p=30458 u=esteban.ferreira n=ansible | ERROR! Invalid variable name in vars specified for Task: 'tu-nombre' is not a valid variable name
+
+The error appears to be in '/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 22, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  vars:
+    ansible_become_pass: "pass"
+    ^ here
+
+2024-11-18 17:18:55,323 p=30458 u=esteban.ferreira n=ansible | PLAY RECAP ****************************************************************************************************************
+2024-11-18 17:18:55,323 p=30458 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 17:18:55,324 p=30458 u=esteban.ferreira n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 17:22:04,111 p=30765 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 17:22:04,207 p=30765 u=esteban.ferreira n=ansible | PLAY [all] ****************************************************************************************************************
+2024-11-18 17:22:04,213 p=30765 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2024-11-18 17:22:05,002 p=30765 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 17:22:05,424 p=30765 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 17:22:05,437 p=30765 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] *****************************************************************************************
+2024-11-18 17:22:05,480 p=30765 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ************************************************************************************************
+2024-11-18 17:22:05,494 p=30765 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 17:22:05,499 p=30765 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 17:22:05,506 p=30765 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] **********************************************************************
+2024-11-18 17:22:05,765 p=30765 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 17:22:05,847 p=30765 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 17:22:05,896 p=30765 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 17:22:06,072 p=30765 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 17:22:06,080 p=30765 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_alumno.txt] *****************************************************************************
+2024-11-18 17:22:06,518 p=30765 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 17:22:06,607 p=30765 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 17:22:06,614 p=30765 u=esteban.ferreira n=ansible | TASK [Otra tarea] *********************************************************************************************************
+2024-11-18 17:22:06,629 p=30765 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 17:22:06,635 p=30765 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 17:22:06,649 p=30765 u=esteban.ferreira n=ansible | PLAY RECAP ****************************************************************************************************************
+2024-11-18 17:22:06,649 p=30765 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 17:22:06,649 p=30765 u=esteban.ferreira n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 17:54:40,502 p=31308 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 17:54:40,597 p=31308 u=esteban.ferreira n=ansible | PLAY [all] ****************************************************************************************************************
+2024-11-18 17:54:40,603 p=31308 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2024-11-18 17:54:41,368 p=31308 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 17:54:41,820 p=31308 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 17:54:41,833 p=31308 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] *****************************************************************************************
+2024-11-18 17:54:41,866 p=31308 u=esteban.ferreira n=ansible | ERROR! conflicting action statements: file, msg
+
+The error appears to be in '/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 7, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Crear estructura de directorios
+  ^ here
+
+2024-11-18 17:54:41,867 p=31308 u=esteban.ferreira n=ansible | PLAY RECAP ****************************************************************************************************************
+2024-11-18 17:54:41,867 p=31308 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 17:54:41,867 p=31308 u=esteban.ferreira n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 17:55:52,435 p=31584 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 17:55:52,529 p=31584 u=esteban.ferreira n=ansible | PLAY [all] ****************************************************************************************************************
+2024-11-18 17:55:52,535 p=31584 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2024-11-18 17:55:53,310 p=31584 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 17:55:53,811 p=31584 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 17:55:53,824 p=31584 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] *****************************************************************************************
+2024-11-18 17:55:53,866 p=31584 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ************************************************************************************************
+2024-11-18 17:55:53,880 p=31584 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 17:55:53,885 p=31584 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 17:55:53,907 p=31584 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] **********************************************************************
+2024-11-18 17:55:54,152 p=31584 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 17:55:54,224 p=31584 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 17:55:54,297 p=31584 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 17:55:54,446 p=31584 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 17:55:54,453 p=31584 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_alumno.txt] *****************************************************************************
+2024-11-18 17:55:54,873 p=31584 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 17:55:54,967 p=31584 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 17:55:54,974 p=31584 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_equipo.txt] *****************************************************************************
+2024-11-18 17:55:55,013 p=31584 u=esteban.ferreira n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Could not find or access 'template_b.j2'\nSearched in:\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/templates/template_b.j2\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/template_b.j2\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/templates/template_b.j2\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/template_b.j2\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/templates/template_b.j2\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/template_b.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-11-18 17:55:55,023 p=31584 u=esteban.ferreira n=ansible | fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "Could not find or access 'template_b.j2'\nSearched in:\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/templates/template_b.j2\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/template_b.j2\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/templates/template_b.j2\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/template_b.j2\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/templates/template_b.j2\n\t/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/template_b.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-11-18 17:55:55,026 p=31584 u=esteban.ferreira n=ansible | PLAY RECAP ****************************************************************************************************************
+2024-11-18 17:55:55,026 p=31584 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 17:55:55,026 p=31584 u=esteban.ferreira n=ansible | localhost                  : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:34:24,668 p=32127 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 18:34:24,768 p=32127 u=esteban.ferreira n=ansible | PLAY [all] ****************************************************************************************************************
+2024-11-18 18:34:24,774 p=32127 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2024-11-18 18:34:25,559 p=32127 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 18:34:26,040 p=32127 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:34:26,052 p=32127 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] *****************************************************************************************
+2024-11-18 18:34:26,095 p=32127 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ************************************************************************************************
+2024-11-18 18:34:26,109 p=32127 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 18:34:26,114 p=32127 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 18:34:26,137 p=32127 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] **********************************************************************
+2024-11-18 18:34:26,373 p=32127 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:34:26,465 p=32127 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:34:26,503 p=32127 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:34:26,690 p=32127 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:34:26,697 p=32127 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_alumno.txt] *****************************************************************************
+2024-11-18 18:34:27,137 p=32127 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 18:34:27,224 p=32127 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:34:27,232 p=32127 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_equipo.txt] *****************************************************************************
+2024-11-18 18:34:27,281 p=32127 u=esteban.ferreira n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'cores' is undefined"}
+2024-11-18 18:34:27,293 p=32127 u=esteban.ferreira n=ansible | fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'cores' is undefined"}
+2024-11-18 18:34:27,294 p=32127 u=esteban.ferreira n=ansible | PLAY RECAP ****************************************************************************************************************
+2024-11-18 18:34:27,294 p=32127 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:34:27,294 p=32127 u=esteban.ferreira n=ansible | localhost                  : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:35:05,251 p=32717 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 18:35:05,349 p=32717 u=esteban.ferreira n=ansible | PLAY [all] ****************************************************************************************************************
+2024-11-18 18:35:05,356 p=32717 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2024-11-18 18:35:06,143 p=32717 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 18:35:06,193 p=32717 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:35:06,206 p=32717 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] *****************************************************************************************
+2024-11-18 18:35:06,249 p=32717 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ************************************************************************************************
+2024-11-18 18:35:06,263 p=32717 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 18:35:06,270 p=32717 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 18:35:06,277 p=32717 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] **********************************************************************
+2024-11-18 18:35:06,550 p=32717 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:35:06,616 p=32717 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:35:06,699 p=32717 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:35:06,868 p=32717 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:35:06,875 p=32717 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_alumno.txt] *****************************************************************************
+2024-11-18 18:35:07,347 p=32717 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 18:35:07,443 p=32717 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:35:07,450 p=32717 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_equipo.txt] *****************************************************************************
+2024-11-18 18:35:07,761 p=32717 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 18:35:07,928 p=32717 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:35:07,934 p=32717 u=esteban.ferreira n=ansible | TASK [Otra tarea] *********************************************************************************************************
+2024-11-18 18:35:07,949 p=32717 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 18:35:07,954 p=32717 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 18:35:07,967 p=32717 u=esteban.ferreira n=ansible | PLAY RECAP ****************************************************************************************************************
+2024-11-18 18:35:07,967 p=32717 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:35:07,968 p=32717 u=esteban.ferreira n=ansible | localhost                  : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:38:11,712 p=33247 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 18:38:11,807 p=33247 u=esteban.ferreira n=ansible | PLAY [all] ****************************************************************************************************************
+2024-11-18 18:38:11,813 p=33247 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2024-11-18 18:38:12,597 p=33247 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 18:38:13,063 p=33247 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:38:13,076 p=33247 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] *****************************************************************************************
+2024-11-18 18:38:13,118 p=33247 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ************************************************************************************************
+2024-11-18 18:38:13,133 p=33247 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 18:38:13,138 p=33247 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 18:38:13,145 p=33247 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] **********************************************************************
+2024-11-18 18:38:13,397 p=33247 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:38:13,504 p=33247 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:38:13,540 p=33247 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:38:13,736 p=33247 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:38:13,743 p=33247 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_alumno.txt] *****************************************************************************
+2024-11-18 18:38:14,190 p=33247 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 18:38:14,275 p=33247 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:38:14,282 p=33247 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_equipo.txt] *****************************************************************************
+2024-11-18 18:38:14,604 p=33247 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 18:38:14,754 p=33247 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:38:14,760 p=33247 u=esteban.ferreira n=ansible | TASK [Otra tarea] *********************************************************************************************************
+2024-11-18 18:38:14,777 p=33247 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 18:38:14,781 p=33247 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 18:38:14,795 p=33247 u=esteban.ferreira n=ansible | PLAY RECAP ****************************************************************************************************************
+2024-11-18 18:38:14,795 p=33247 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:38:14,795 p=33247 u=esteban.ferreira n=ansible | localhost                  : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:46:22,104 p=33847 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 18:46:22,198 p=33847 u=esteban.ferreira n=ansible | PLAY [all] ****************************************************************************************************************
+2024-11-18 18:46:22,204 p=33847 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2024-11-18 18:46:22,979 p=33847 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 18:46:23,412 p=33847 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:46:23,426 p=33847 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] *****************************************************************************************
+2024-11-18 18:46:23,469 p=33847 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ************************************************************************************************
+2024-11-18 18:46:23,483 p=33847 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 18:46:23,488 p=33847 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 18:46:23,496 p=33847 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] **********************************************************************
+2024-11-18 18:46:23,752 p=33847 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:46:23,838 p=33847 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 18:46:23,889 p=33847 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:46:24,060 p=33847 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 18:46:24,067 p=33847 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_alumno.txt] *****************************************************************************
+2024-11-18 18:46:24,488 p=33847 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 18:46:24,577 p=33847 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:46:24,584 p=33847 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_equipo.txt] *****************************************************************************
+2024-11-18 18:46:24,892 p=33847 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 18:46:25,045 p=33847 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:46:25,052 p=33847 u=esteban.ferreira n=ansible | TASK [2do_parcial : Agregar grupo 2PSupervisores a sudoers] ***************************************************************
+2024-11-18 18:46:25,304 p=33847 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 18:46:25,374 p=33847 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 18:46:25,381 p=33847 u=esteban.ferreira n=ansible | TASK [Otra tarea] *********************************************************************************************************
+2024-11-18 18:46:25,395 p=33847 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 18:46:25,400 p=33847 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 18:46:25,414 p=33847 u=esteban.ferreira n=ansible | PLAY RECAP ****************************************************************************************************************
+2024-11-18 18:46:25,414 p=33847 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 18:46:25,414 p=33847 u=esteban.ferreira n=ansible | localhost                  : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 19:00:28,315 p=34521 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 19:00:28,408 p=34521 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************************************
+2024-11-18 19:00:28,415 p=34521 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ***************************************************************************************************
+2024-11-18 19:00:29,212 p=34521 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 19:00:29,647 p=34521 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:00:29,660 p=34521 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] ****************************************************************************************
+2024-11-18 19:00:29,703 p=34521 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ***********************************************************************************************
+2024-11-18 19:00:29,718 p=34521 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 19:00:29,723 p=34521 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 19:00:29,744 p=34521 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] *********************************************************************
+2024-11-18 19:00:29,978 p=34521 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 19:00:30,065 p=34521 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 19:00:30,117 p=34521 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 19:00:30,287 p=34521 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 19:00:30,294 p=34521 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_alumno.txt] ****************************************************************************
+2024-11-18 19:00:30,715 p=34521 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 19:00:30,818 p=34521 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:00:30,824 p=34521 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_equipo.txt] ****************************************************************************
+2024-11-18 19:00:31,132 p=34521 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 19:00:31,277 p=34521 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:00:31,284 p=34521 u=esteban.ferreira n=ansible | TASK [2do_parcial : Agregar grupo 2PSupervisores a sudoers] **************************************************************
+2024-11-18 19:00:31,540 p=34521 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 19:00:31,599 p=34521 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:00:31,606 p=34521 u=esteban.ferreira n=ansible | TASK [Otra tarea] ********************************************************************************************************
+2024-11-18 19:00:31,623 p=34521 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 19:00:31,627 p=34521 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 19:00:31,641 p=34521 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************************************
+2024-11-18 19:00:31,642 p=34521 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 19:00:31,642 p=34521 u=esteban.ferreira n=ansible | localhost                  : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 19:07:25,734 p=35197 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 19:07:25,828 p=35197 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************************************
+2024-11-18 19:07:25,834 p=35197 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ***************************************************************************************************
+2024-11-18 19:07:26,624 p=35197 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 19:07:27,065 p=35197 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:07:27,112 p=35197 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] ****************************************************************************************
+2024-11-18 19:07:27,158 p=35197 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ***********************************************************************************************
+2024-11-18 19:07:27,172 p=35197 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 19:07:27,177 p=35197 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 19:07:27,198 p=35197 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] *********************************************************************
+2024-11-18 19:07:27,434 p=35197 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 19:07:27,522 p=35197 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 19:07:27,566 p=35197 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 19:07:27,753 p=35197 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 19:07:27,761 p=35197 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_alumno.txt] ****************************************************************************
+2024-11-18 19:07:28,218 p=35197 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 19:07:28,291 p=35197 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:07:28,298 p=35197 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_equipo.txt] ****************************************************************************
+2024-11-18 19:07:28,589 p=35197 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 19:07:28,774 p=35197 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:07:28,781 p=35197 u=esteban.ferreira n=ansible | TASK [2do_parcial : Agregar grupo 2PSupervisores a sudoers] **************************************************************
+2024-11-18 19:07:29,041 p=35197 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 19:07:29,094 p=35197 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:07:29,101 p=35197 u=esteban.ferreira n=ansible | TASK [Otra tarea] ********************************************************************************************************
+2024-11-18 19:07:29,116 p=35197 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 19:07:29,120 p=35197 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 19:07:29,134 p=35197 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************************************
+2024-11-18 19:07:29,134 p=35197 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 19:07:29,135 p=35197 u=esteban.ferreira n=ansible | localhost                  : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 19:12:47,269 p=35870 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 19:12:47,365 p=35870 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************************************
+2024-11-18 19:12:47,371 p=35870 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ***************************************************************************************************
+2024-11-18 19:12:48,171 p=35870 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 19:12:48,584 p=35870 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:12:48,598 p=35870 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] ****************************************************************************************
+2024-11-18 19:12:48,641 p=35870 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ***********************************************************************************************
+2024-11-18 19:12:48,656 p=35870 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 19:12:48,660 p=35870 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 19:12:48,669 p=35870 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] *********************************************************************
+2024-11-18 19:12:48,920 p=35870 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 19:12:49,008 p=35870 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 19:12:49,062 p=35870 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 19:12:49,226 p=35870 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 19:12:49,233 p=35870 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_alumno.txt] ****************************************************************************
+2024-11-18 19:12:49,697 p=35870 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 19:12:49,768 p=35870 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:12:49,775 p=35870 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_equipo.txt] ****************************************************************************
+2024-11-18 19:12:50,077 p=35870 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 19:12:50,251 p=35870 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:12:50,258 p=35870 u=esteban.ferreira n=ansible | TASK [2do_parcial : Agregar grupo 2PSupervisores a sudoers] **************************************************************
+2024-11-18 19:12:50,512 p=35870 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 19:12:50,586 p=35870 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:12:50,593 p=35870 u=esteban.ferreira n=ansible | TASK [Otra tarea] ********************************************************************************************************
+2024-11-18 19:12:50,608 p=35870 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 19:12:50,613 p=35870 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 19:12:50,627 p=35870 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************************************
+2024-11-18 19:12:50,627 p=35870 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 19:12:50,627 p=35870 u=esteban.ferreira n=ansible | localhost                  : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 19:40:22,656 p=36629 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 19:40:22,751 p=36629 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************************************
+2024-11-18 19:40:22,758 p=36629 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ***************************************************************************************************
+2024-11-18 19:40:23,545 p=36629 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 19:40:23,990 p=36629 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:40:24,004 p=36629 u=esteban.ferreira n=ansible | TASK [Mostrar usuario de ansible] ****************************************************************************************
+2024-11-18 19:40:24,023 p=36629 u=esteban.ferreira n=ansible | fatal: [127.0.0.1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible_user' is undefined\n\nThe error appears to be in '/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/playbook.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Mostrar usuario de ansible\n      ^ here\n"}
+2024-11-18 19:40:24,037 p=36629 u=esteban.ferreira n=ansible | fatal: [localhost]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible_user' is undefined\n\nThe error appears to be in '/home/esteban.ferreira/repogit/UTN-FRA_SO_Examenes/202406/ansible/playbook.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Mostrar usuario de ansible\n      ^ here\n"}
+2024-11-18 19:40:24,038 p=36629 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************************************
+2024-11-18 19:40:24,038 p=36629 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 19:40:24,038 p=36629 u=esteban.ferreira n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-18 19:41:52,836 p=36965 u=esteban.ferreira n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-18 19:41:52,930 p=36965 u=esteban.ferreira n=ansible | PLAY [all] ***************************************************************************************************************
+2024-11-18 19:41:52,936 p=36965 u=esteban.ferreira n=ansible | TASK [Gathering Facts] ***************************************************************************************************
+2024-11-18 19:41:53,717 p=36965 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 19:41:54,158 p=36965 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:41:54,171 p=36965 u=esteban.ferreira n=ansible | TASK [include_role : 2do_parcial] ****************************************************************************************
+2024-11-18 19:41:54,213 p=36965 u=esteban.ferreira n=ansible | TASK [2do_parcial : debug] ***********************************************************************************************
+2024-11-18 19:41:54,227 p=36965 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 19:41:54,232 p=36965 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-18 19:41:54,240 p=36965 u=esteban.ferreira n=ansible | TASK [2do_parcial : Crear estructura de directorios] *********************************************************************
+2024-11-18 19:41:54,502 p=36965 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 19:41:54,563 p=36965 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/alumno)
+2024-11-18 19:41:54,642 p=36965 u=esteban.ferreira n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 19:41:54,782 p=36965 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => (item=/tmp/2do_parcial/equipo)
+2024-11-18 19:41:54,789 p=36965 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_alumno.txt] ****************************************************************************
+2024-11-18 19:41:55,237 p=36965 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 19:41:55,318 p=36965 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:41:55,325 p=36965 u=esteban.ferreira n=ansible | TASK [2do_parcial : Generar datos_equipo.txt] ****************************************************************************
+2024-11-18 19:41:55,617 p=36965 u=esteban.ferreira n=ansible | changed: [localhost]
+2024-11-18 19:41:55,797 p=36965 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:41:55,804 p=36965 u=esteban.ferreira n=ansible | TASK [2do_parcial : Agregar grupo 2PSupervisores a sudoers] **************************************************************
+2024-11-18 19:41:56,055 p=36965 u=esteban.ferreira n=ansible | ok: [localhost]
+2024-11-18 19:41:56,118 p=36965 u=esteban.ferreira n=ansible | ok: [127.0.0.1]
+2024-11-18 19:41:56,125 p=36965 u=esteban.ferreira n=ansible | TASK [Otra tarea] ********************************************************************************************************
+2024-11-18 19:41:56,139 p=36965 u=esteban.ferreira n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 19:41:56,144 p=36965 u=esteban.ferreira n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-18 19:41:56,158 p=36965 u=esteban.ferreira n=ansible | PLAY RECAP ***************************************************************************************************************
+2024-11-18 19:41:56,158 p=36965 u=esteban.ferreira n=ansible | 127.0.0.1                  : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-18 19:41:56,158 p=36965 u=esteban.ferreira n=ansible | localhost                  : ok=7    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
